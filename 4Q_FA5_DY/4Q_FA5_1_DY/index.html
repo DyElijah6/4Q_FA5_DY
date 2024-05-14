@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA5-1</title>
+</head>
+<style>
+    body {background-color: green;
+            color: greenyellow;}
+</style>
+<body>
+
+  <h2>Go to next page: </h2>
+
+    <script>
+      
+        var inputNumber = prompt("Please enter a number: ");
+        
+        while (!inputNumber || isNaN(inputNumber)) { alert("Invalid input. Please input a number."); inputNumber = prompt("Please enter a number: ");}
+        
+        let userInput = parseInt(inputNumber);
+        document.write("User input: " + userInput + "<br/><br/>");
+        
+        if (userInput % 2 === 0) { 
+            for (var z = userInput; z > 0; z--) 
+            {
+                var x = "";
+                for (var y = 1; y <= z; y++) {
+                    x += z + " ";
+                }
+                
+                document.write(x + "<br/>");
+            }
+        } else { for (var z = userInput; z > 0; z--) 
+                {
+                var x = "";
+                for (var y = 1; y <= userInput; y++) {
+                    x += z + " ";
+                }
+
+                document.write(x + "<br/>");
+            }
+        }
+    </script>
+</body>
+</html>

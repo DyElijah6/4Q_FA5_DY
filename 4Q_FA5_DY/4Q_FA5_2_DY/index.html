@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FA5-2</title>
+</head>
+<style>
+    body {background-color: green;
+            color: greenyellow;}
+</style>
+<body>
+    <h1>My Contacts</h1>
+    
+    <label for="name">Enter a name:</label><br><br>
+    <input type="text" id="contactArea" placeholder="Type Here">
+    <button onclick="add()">Add</button>
+    <button onclick="remove()">Remove</button>
+    
+    <p id="d"></p>
+    
+    <script>
+        var contactList = [];
+    
+        function add() {
+
+            var contact = document.getElementById("contactArea").value;
+            if (contactList.length < 7) { contactList.push(contact);} 
+            else { contactList.push(contact);
+                contactList.shift(); }
+
+            display();
+        }
+    
+        function remove() {
+
+                if (contactList.length > 0) { contactList.pop();
+
+                display();
+            }
+        }
+    
+        function display() { document.getElementById("d").innerText = contactList.join(" "); }
+
+
+
+    </script>
+    
+</body>
+</html>
